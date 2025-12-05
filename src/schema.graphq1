@@ -1,0 +1,51 @@
+"""A single todo item."""
+type Todo {
+  """Unique identifier for the todo."""
+  id: ID!
+
+  """Short title of the todo."""
+  title: String!
+
+  """Longer description (optional)."""
+  description: String
+
+  """Is the todo completed?"""
+  completed: Boolean!
+
+  """ISO 8601 due date (optional)."""
+  dueDate: String
+}
+
+"""Input used when creating a new todo."""
+input CreateTodoInput {
+  title: String!
+  description: String
+  dueDate: String
+}
+
+"""Input used when updating an existing todo."""
+input UpdateTodoInput {
+  title: String
+  description: String
+  completed: Boolean
+  dueDate: String
+}
+
+type Query {
+  """Return all todos, optionally filter by completed status."""
+  todos(completed: Boolean): [Todo!]!
+
+  """Return a single todo by ID."""
+  todo(id: ID!): Todo
+}
+
+type Mutation {
+  """Create a new todo. Returns the created Todo."""
+  createTodo(input: CreateTodoInput!): Todo!
+
+  """Update an existing todo. Returns the updated Todo."""
+  updateTodo(id: ID!, input: UpdateTodoInput!): Todo
+
+  """Delete a todo by id. Returns true if deleted."""
+  deleteTodo(id: ID!): Boolean!
+}

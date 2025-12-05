@@ -1,0 +1,16 @@
+graphql-api/
+├── src/
+│   ├── schema/
+│   │   └── schema.js
+│   ├── resolvers/
+│   │   ├── resolvers.js
+│   │   └── fieldResolvers.js
+│   ├── models/
+│   │   └── data.js
+│   └── server.js
+├── tests/
+│   ├── queries.test.js
+│   └── mutations.test.js
+├── package.json
+├── README.md
+└── .gitignore

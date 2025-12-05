@@ -1,0 +1,23 @@
+{
+  "name": "api-ex-8",
+  "version": "1.0.0",
+  "description": "GraphQL API with documentation and tests",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node --test test.js"
+  },
+  "keywords": ["graphql", "apollo", "api", "assignment"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.10.4",
+    "express": "^4.22.1",
+    "graphql": "^16.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
